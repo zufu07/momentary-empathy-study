@@ -97,8 +97,21 @@
 </head>
 <body>
     <h1>📢 Momentary Empathy in Social Media Activism</h1>
-    <p>Explore the psychological dynamics of online activism. Click below to download the full research paper.</p>
-    <a href="momentary-empathy-study.pdf" class="download-btn" download>📄 Download Research Paper</a>
+    <p>Explore the psychological dynamics of online activism. Enter your details below to download the full research paper.</p>
+    <form id="downloadForm">
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+        <button type="submit" class="download-btn">📄 Download Research Paper</button>
+    </form>
     <footer>© 2025 Research by [Zufar Hussain, Srija Sriram, Sangeeth Gopinath]. All Rights Reserved.</footer>
+    <script>
+        document.getElementById('downloadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Implement form submission logic here (e.g., send data to a server)
+            alert('Thank you! Your download should start shortly.');
+            // Simulate download
+            window.location.href = 'momentary-empathy-study.pdf';
+        });
+    </script>
 </body>
 </html>
